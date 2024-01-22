@@ -93,6 +93,7 @@ There are three main types of CSS style sheets:
 ## Box Model:
 
 The **box model** is a fundamental concept in CSS that defines the layout and rendering of elements on a web page. Each HTML element is treated as a rectangular box with the following components:
+![box](../images/css_box_model.png)
 
 1. **Content:** The actual content of the box.
 2. **Padding:** Clears an area around the content inside the box. It is transparent and typically has a background color.
@@ -112,3 +113,41 @@ Here's a simple example of the box model in CSS:
 ```
 
 This CSS code applies a box model to an element with the class "box," setting its width, height, padding, border, and margin.
+
+```css
+    <style>
+        @font-face {
+            font-family: myFirstFont;
+            src: url(sansation_light.woff);
+        }
+        body{
+            margin: 0;
+        }
+        img{
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+        #content{
+            width: 100%;
+            overflow: hidden;
+            background-color: antiquewhite;
+        }
+        #title {
+            float: left; /* Float the content div to the left */
+            width: 70%; /* Adjust the width of the content div */
+            text-align: center;
+        }
+
+        #image {
+            float: left; /* Float the image div to the right */
+            width: 30%; /* Adjust the width of the image div */
+        }
+        #title>h1{
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+        #title h2, h3{
+            margin: 5px;
+        }
+    </style>
+```
