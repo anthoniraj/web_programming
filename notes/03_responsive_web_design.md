@@ -4,11 +4,9 @@
 ```css
 /* Styles for screens smaller than 600 pixels (typical for mobile phones) */
 @media only screen and (max-width: 600px) {
-  /* Your mobile styles go here */
   body {
     font-size: 14px;
   }
-  /* Additional styles for smaller screens */
 }
 ```
 - Media Queries for ALL Devices
@@ -24,7 +22,6 @@
 ```css
 /* Styles for screens between 600px and 1200px */
 @media only screen and (min-width: 600px) and (max-width: 1200px) {
-  /* Your styles for this screen width range */
   body {
     font-size: 16px;
   }
