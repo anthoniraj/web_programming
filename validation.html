@@ -6,14 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Validation</title>
     <style>
-        input[type="text"] {
+        input[type="text"],
+        input[type="password"] {
             border: 2px solid yellow;
         }
 
-        input[type="text"]:valid {
+        input[type="text"]:valid,
+        input[type="password"]:valid {
             border: 2px solid green;
         }
-        input[type="text"]:invalid {
+
+        input[type="text"]:invalid,
+        input[type="password"]:invalid {
             border: 2px solid red;
         }
     </style>
@@ -21,13 +25,12 @@
 
 <body>
     <form>
-        <input type="text" name="username" required id="userbox" pattern="[a-zA-Z]{3,11}"
-            oninvalid="this.setCustomValidity('Username is not valid')"
-            oninput="this.setCustomValidity('')">
-        <input type="password" name="password" required pattern=".{8,15}"> 
+        <input type="text" name="username" required minlength="3" pattern="[a-zA-Z]{3,11}"
+            oninvalid="this.setCustomValidity('Username is not valid')" oninput="this.setCustomValidity('')">
+        <input type="password" name="password" required pattern=".{8,15}">
         <!-- for password having any char with min 8 and max of 15 -->
 
-        <input type="text" name="regno" required pattern="[0-9]{2}[A-Z]{3}[0-9]{4}"> 
+        <input type="text" name="regno" required pattern="[0-9]{2}[A-Z]{3}[0-9]{4}">
         <!--for regno 22BCE1001 -->
         <button type="submit">Submit</button>
     </form>
