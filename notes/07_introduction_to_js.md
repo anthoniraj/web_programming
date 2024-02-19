@@ -90,9 +90,6 @@ function greet() {
 </body>
 </html>
 ```
-
-
-
 ### var vs let:
 
 - **`var`:** Variables declared with `var` have function-level scope. They can be re-declared and updated throughout the function or global scope.
@@ -211,7 +208,3 @@ Example:
 </script>
 </html>
 ```
-
----
-
-This note provides a comprehensive overview of JavaScript, its usage, variables, operators, functions, objects, and considerations for placement within HTML documents, with examples included in appropriate places.
