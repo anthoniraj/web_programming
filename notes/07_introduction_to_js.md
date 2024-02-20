@@ -189,22 +189,3 @@ Example:
 </body>
 </html>
 ```
-
-- **Outside `<body>` tags:** Placing JavaScript outside the `<body>` tags can cause issues with accessing or manipulating HTML elements since the JavaScript code executes before the HTML content is parsed. It's generally not recommended unless for specific script loading purposes.
-
-Example:
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>JavaScript Outside Body Example</title>
-</head>
-<body>
-    <!-- Body content -->
-</body>
-<script>
-    // JavaScript code outside the body tags
-    console.log("This script runs before the body content is rendered.");
-</script>
-</html>
-```
