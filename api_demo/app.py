@@ -1,5 +1,17 @@
 from flask import Flask, jsonify, request
 from nltk.corpus import wordnet
+'''
+Install NLTK :
+    pip install nltk
+Download the WordNet corpus
+    type python in terminal 
+    import nltk
+    nltk.download('wordnet')
+Run the script 
+    python app.py
+API URL
+    http://your_ip_address/word/hello
+'''
 
 app = Flask(__name__)
 
