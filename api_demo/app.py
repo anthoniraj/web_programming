@@ -10,26 +10,18 @@ Download the WordNet corpus
 Run the script 
     python app.py
 API URL
-    http://your_ip_address/word/hello
+    http://your_ip_address:5000/meaning/hello
 '''
 
 app = Flask(__name__)
 
-@app.route('/meaning', methods=['GET'])
-def get_meaning():
-    word = request.args.get('word')
-
-    if word is None:
-        return jsonify({"error": "Word parameter is missing"}), 400
-
+@app.route('/meaning/<word>', methods=['GET'])
+def get_meaning(word):
     synsets = wordnet.synsets(word)
-
     if not synsets:
-        return jsonify({"error": "Word not found"}), 404
-
+        return jsonify({"error": "Word not found"})
     meanings = [syn.definition() for syn in synsets]
-
     return jsonify({"word": word, "meanings": meanings})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0',debug=True)
