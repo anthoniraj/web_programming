@@ -16,7 +16,7 @@ fetch('http://127.0.0.1:5000/meaning/fetch')
     .then(data => displayData(data))
     .catch(error => displayError(error.message));
 
-/* Simplefied fecth function */
+/* Simplified fecth function */
 fetch('http://127.0.0.1:5000/meaning/fetch')
     .then(response => {
         if (!response.ok) {
