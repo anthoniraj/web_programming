@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <textarea id="content" cols="50" rows="5"></textarea>
+    <div id="result"></div>
+    <script>
+        const textArea = document.getElementById("content");
+        const resutArea = document.getElementById("result");
+        textArea.addEventListener('input', 
+            function(event){
+                let temp = event.target.value;
+                resutArea.textContent = temp.toUpperCase();
+            }
+        );
+    </script>
+</body>
+</html>
