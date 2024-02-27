@@ -4,7 +4,7 @@ from nltk.corpus import wordnet
 Install NLTK :
     pip install nltk
 Download the WordNet corpus
-    type python in terminal 
+    Type python in terminal and then run the following commands,
     import nltk
     nltk.download('wordnet')
 Run the script 
